@@ -57,6 +57,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		6D19B64C23D0E8140079DE53 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				6DBBCCE623CB7E8A006F5183 /* ButtonView.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
 		6D2E336B23CA3D68000B0BC6 = {
 			isa = PBXGroup;
 			children = (
@@ -78,7 +86,6 @@
 			children = (
 				6D2E337723CA3D68000B0BC6 /* AppDelegate.swift */,
 				6D2E337923CA3D68000B0BC6 /* SceneDelegate.swift */,
-				6D2E337B23CA3D68000B0BC6 /* ContentView.swift */,
 				6D6A127B23CDF45A00BA5CE1 /* Views */,
 				6D19B64A23D0DC610079DE53 /* Resources */,
 				6D6A127D23CDF56C00BA5CE1 /* Logic */,
@@ -108,7 +115,8 @@
 		6D6A127B23CDF45A00BA5CE1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				6DBBCCE623CB7E8A006F5183 /* ButtonView.swift */,
+				6D19B64C23D0E8140079DE53 /* SubViews */,
+				6D2E337B23CA3D68000B0BC6 /* ContentView.swift */,
 				6D2E338E23CA6536000B0BC6 /* NumGeneratorView.swift */,
 				6D939EB923CCC90C000EDE12 /* FlipCoinView.swift */,
 				6D19B64823D09F5A0079DE53 /* PasswordGeneratorView.swift */,
