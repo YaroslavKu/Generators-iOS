@@ -54,7 +54,7 @@ struct FlipCoinView: View {
                         }
                     }
                 }) {
-                    ButtonView(imgName: "gradient2", text: "Flip")
+                    ButtonView(text: "Flip")
                 }.buttonStyle(PlainButtonStyle())
                 
             }.padding()

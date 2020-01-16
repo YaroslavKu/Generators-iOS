@@ -61,7 +61,7 @@ struct NumGeneratorView: View {
                     
                     
                 }) {
-                    ButtonView(imgName: "gradient2", text: "Generate")
+                    ButtonView(text: "Generate")
                 }.buttonStyle(PlainButtonStyle())
             }.padding()
             

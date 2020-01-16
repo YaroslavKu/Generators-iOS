@@ -14,27 +14,22 @@ struct ContentView: View {
             ScrollView {
                 VStack (spacing: 15) {
                     NavigationLink(destination: NumGeneratorView()) {
-                        ButtonView(imgName: "gradient2", text: "Numbers")
+                        ButtonView(text: "Numbers")
                     }
                     .buttonStyle(PlainButtonStyle())
                     
                     NavigationLink(destination: FlipCoinView()) {
-                        ButtonView(imgName: "gradient2", text: "Flip a coin")
+                        ButtonView(text: "Flip a coin")
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                    
+                    NavigationLink(destination: PasswordGeneratorView()) {
+                        ButtonView(text: "Passwords")
                     }
                     .buttonStyle(PlainButtonStyle())
                     
                     NavigationLink(destination: Text("Test")) {
-                        ButtonView(imgName: "gradient2", text: "Roll the dice (x)")
-                    }
-                    .buttonStyle(PlainButtonStyle())
-                    
-                    NavigationLink(destination: Text("Test")) {
-                        ButtonView(imgName: "gradient2", text: "Passwords (x)")
-                    }
-                    .buttonStyle(PlainButtonStyle())
-                    
-                    NavigationLink(destination: Text("Test")) {
-                        ButtonView(imgName: "gradient2", text: "Words (x)")
+                        ButtonView(text: "Words (x)")
                     }
                     .buttonStyle(PlainButtonStyle())
                 }.padding()
