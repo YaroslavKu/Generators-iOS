@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct NumGeneratorView: View {
-    @State var randNum = "0"
+    @State var randNum = "47"
     @State var min: String = "1"
     @State var max: String = "100"
     
@@ -43,22 +43,17 @@ struct NumGeneratorView: View {
                 }
                 
                 Button(action: {
-                    if Int(self.min)! <= Int(self.max)! {
-                        var timerLimit = 5
-                        Timer.scheduledTimer(withTimeInterval: 0.05, repeats: true) { timer in
-                            let number = Int.random(in: Int(self.min)! ... Int(self.max)!)
-                            self.randNum = String(number)
-                            timerLimit -= 1
+                    
+                    var timerLimit = 8
+                    Timer.scheduledTimer(withTimeInterval: 0.06, repeats: true) { timer in
+                        
+                        self.randNum = generateRandomNumber(min: self.min, max: self.max)
+                        timerLimit -= 1
                             
-                            if (timerLimit == 0) {
-                                timer.invalidate()
-                            }
+                        if (timerLimit == 0) {
+                            timer.invalidate()
                         }
-                    } else {
-                        self.randNum = "error"
                     }
-                    
-                    
                     
                 }) {
                     ButtonView(text: "Generate")
@@ -67,12 +62,6 @@ struct NumGeneratorView: View {
             
         }
         
-    }
-}
-
-struct NumGeneratorView_Previews: PreviewProvider {
-    static var previews: some View {
-        NumGeneratorView()
     }
 }
 
@@ -88,5 +77,11 @@ struct NumberArea: View {
     
     func getSize() -> CGFloat {
         return CGFloat(260 - text.count*30)
+    }
+}
+
+struct NumGeneratorView_Previews: PreviewProvider {
+    static var previews: some View {
+        NumGeneratorView()
     }
 }

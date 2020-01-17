@@ -16,6 +16,7 @@
 		6D2E338423CA3D6D000B0BC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D2E338223CA3D6D000B0BC6 /* LaunchScreen.storyboard */; };
 		6D2E338F23CA6536000B0BC6 /* NumGeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2E338E23CA6536000B0BC6 /* NumGeneratorView.swift */; };
 		6D6A127823CDF10B00BA5CE1 /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6A127723CDF10B00BA5CE1 /* PlaySound.swift */; };
+		6D80D14123D2596A00812D1C /* GenerateRandomNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D80D14023D2596A00812D1C /* GenerateRandomNumber.swift */; };
 		6D939EBA23CCC90C000EDE12 /* FlipCoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D939EB923CCC90C000EDE12 /* FlipCoinView.swift */; };
 		6DBBCCE723CB7E8A006F5183 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBBCCE623CB7E8A006F5183 /* ButtonView.swift */; };
 /* End PBXBuildFile section */
@@ -33,6 +34,7 @@
 		6D2E338E23CA6536000B0BC6 /* NumGeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumGeneratorView.swift; sourceTree = "<group>"; };
 		6D6A127723CDF10B00BA5CE1 /* PlaySound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
 		6D6A127A23CDF3E800BA5CE1 /* coinflip.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = coinflip.mp3; sourceTree = "<group>"; };
+		6D80D14023D2596A00812D1C /* GenerateRandomNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateRandomNumber.swift; sourceTree = "<group>"; };
 		6D939EB923CCC90C000EDE12 /* FlipCoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipCoinView.swift; sourceTree = "<group>"; };
 		6DBBCCE623CB7E8A006F5183 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				6D6A127723CDF10B00BA5CE1 /* PlaySound.swift */,
+				6D80D14023D2596A00812D1C /* GenerateRandomNumber.swift */,
 			);
 			path = Logic;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D2E337823CA3D68000B0BC6 /* AppDelegate.swift in Sources */,
+				6D80D14123D2596A00812D1C /* GenerateRandomNumber.swift in Sources */,
 				6D6A127823CDF10B00BA5CE1 /* PlaySound.swift in Sources */,
 				6D2E337A23CA3D68000B0BC6 /* SceneDelegate.swift in Sources */,
 				6D19B64923D09F5A0079DE53 /* PasswordGeneratorView.swift in Sources */,
