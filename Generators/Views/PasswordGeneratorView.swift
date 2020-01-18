@@ -9,8 +9,64 @@
 import SwiftUI
 
 struct PasswordGeneratorView: View {
+    @State var passLen: Double = 12.0
+    @State var password = "123456789012356"
+    @State var letters  = true
+    @State var digits   = true
+    @State var symbols  = true
+    
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView {
+            VStack (spacing: 25) {
+                HStack {
+                    
+                    Text(self.password)
+                        .font(.system(size: self.password.count > 12 ?
+                            CGFloat(36 - 36*Float(self.password.count)/50) : 36))
+                    
+                    Spacer()
+                    
+                    Button (action: {
+                        print("link pressed")
+                    }) {
+                        Image("copyIcon2")
+                            .resizable()
+                            .frame(width: 35, height: 35)
+                            .cornerRadius(8)
+                            .shadow(color: .init(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)), radius: 2.5)
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                }
+                .frame(height: 100)
+                
+                VStack {
+                    Toggle(isOn: $letters) {
+                        Text("Letters")
+                    }
+                        
+                    Toggle(isOn: $digits) {
+                        Text("Digits")
+                    }
+                        
+                    Toggle(isOn: $symbols) {
+                        Text("Symbols")
+                    }
+                }
+                
+                VStack (alignment: .leading) {
+                    Text("Password length: \(Int(passLen))")
+                    Slider(value: $passLen, in: 6...24, step: 1.0)
+                }
+                
+                        
+                Button (action: {
+                    print("generate pressed")
+                }) {
+                    ButtonView(text: "Generate")
+                }
+            }.padding()
+        }
     }
 }
 
