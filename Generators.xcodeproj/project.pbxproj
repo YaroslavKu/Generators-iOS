@@ -16,6 +16,7 @@
 		6D2E338423CA3D6D000B0BC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D2E338223CA3D6D000B0BC6 /* LaunchScreen.storyboard */; };
 		6D2E338F23CA6536000B0BC6 /* NumGeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2E338E23CA6536000B0BC6 /* NumGeneratorView.swift */; };
 		6D6A127823CDF10B00BA5CE1 /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6A127723CDF10B00BA5CE1 /* PlaySound.swift */; };
+		6D74493B23D4FC63004223A4 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 6D74493A23D4FC62004223A4 /* Sounds */; };
 		6D80D14123D2596A00812D1C /* GenerateRandomNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D80D14023D2596A00812D1C /* GenerateRandomNumber.swift */; };
 		6D939EBA23CCC90C000EDE12 /* FlipCoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D939EB923CCC90C000EDE12 /* FlipCoinView.swift */; };
 		6DBBCCE723CB7E8A006F5183 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBBCCE623CB7E8A006F5183 /* ButtonView.swift */; };
@@ -33,7 +34,7 @@
 		6D2E338523CA3D6D000B0BC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D2E338E23CA6536000B0BC6 /* NumGeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumGeneratorView.swift; sourceTree = "<group>"; };
 		6D6A127723CDF10B00BA5CE1 /* PlaySound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
-		6D6A127A23CDF3E800BA5CE1 /* coinflip.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = coinflip.mp3; sourceTree = "<group>"; };
+		6D74493A23D4FC62004223A4 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
 		6D80D14023D2596A00812D1C /* GenerateRandomNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateRandomNumber.swift; sourceTree = "<group>"; };
 		6D939EB923CCC90C000EDE12 /* FlipCoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipCoinView.swift; sourceTree = "<group>"; };
 		6DBBCCE623CB7E8A006F5183 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
@@ -50,15 +51,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6D19B64A23D0DC610079DE53 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				6D6A127923CDF3E100BA5CE1 /* Sounds */,
-				6D2E337D23CA3D6D000B0BC6 /* Assets.xcassets */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		6D19B64C23D0E8140079DE53 /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -89,7 +81,7 @@
 				6D2E337723CA3D68000B0BC6 /* AppDelegate.swift */,
 				6D2E337923CA3D68000B0BC6 /* SceneDelegate.swift */,
 				6D6A127B23CDF45A00BA5CE1 /* Views */,
-				6D19B64A23D0DC610079DE53 /* Resources */,
+				6D74493D23D4FD85004223A4 /* Resourses */,
 				6D6A127D23CDF56C00BA5CE1 /* Logic */,
 				6D2E337F23CA3D6D000B0BC6 /* Preview Content */,
 				6D2E338223CA3D6D000B0BC6 /* LaunchScreen.storyboard */,
@@ -104,14 +96,6 @@
 				6D2E338023CA3D6D000B0BC6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		6D6A127923CDF3E100BA5CE1 /* Sounds */ = {
-			isa = PBXGroup;
-			children = (
-				6D6A127A23CDF3E800BA5CE1 /* coinflip.mp3 */,
-			);
-			path = Sounds;
 			sourceTree = "<group>";
 		};
 		6D6A127B23CDF45A00BA5CE1 /* Views */ = {
@@ -133,6 +117,15 @@
 				6D80D14023D2596A00812D1C /* GenerateRandomNumber.swift */,
 			);
 			path = Logic;
+			sourceTree = "<group>";
+		};
+		6D74493D23D4FD85004223A4 /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				6D2E337D23CA3D6D000B0BC6 /* Assets.xcassets */,
+				6D74493A23D4FC62004223A4 /* Sounds */,
+			);
+			path = Resourses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +188,7 @@
 			files = (
 				6D2E338423CA3D6D000B0BC6 /* LaunchScreen.storyboard in Resources */,
 				6D2E338123CA3D6D000B0BC6 /* Preview Assets.xcassets in Resources */,
+				6D74493B23D4FC63004223A4 /* Sounds in Resources */,
 				6D2E337E23CA3D6D000B0BC6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

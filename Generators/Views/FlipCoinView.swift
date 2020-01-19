@@ -30,10 +30,9 @@ struct FlipCoinView: View {
                     }
                 
                 Button(action: {
-                    playSound(sound: "coinflip", format: "mp3")
+                    playSound(sound: "Sounds/coinflip", format: "mp3")
                     
                     withAnimation(Animation.easeIn(duration: 0.9)) {
-                        playSound(sound: "coinflip", format: "mp3")
                         self.flipAmount += 1080
                     }
                     
