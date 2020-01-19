@@ -6,3 +6,4 @@ Generators-iOS is a set of tools for quickly solving everyday tasks. I have put 
 # Requirements
 * iOS 13.0+
 * Xcode 11.3+
+* Swift 5
