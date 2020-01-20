@@ -10,7 +10,7 @@ import SwiftUI
 
 struct PasswordGeneratorView: View {
     @State var passLen: Double = 12.0
-    @State var password = "123456789012356"
+    @State var password = "password"
     @State var letters  = true
     @State var digits   = true
     @State var symbols  = true
@@ -44,6 +44,7 @@ struct PasswordGeneratorView: View {
                     Toggle(isOn: $letters) {
                         Text("Letters")
                     }
+
                         
                     Toggle(isOn: $digits) {
                         Text("Digits")
@@ -52,14 +53,17 @@ struct PasswordGeneratorView: View {
                     Toggle(isOn: $symbols) {
                         Text("Symbols")
                     }
-                }
+                    
+                    VStack (alignment: .leading) {
+                        Text("Password length: \(Int(passLen))")
+                            .font(.system(size: 24))
+                        Slider(value: $passLen, in: 6...24, step: 1.0)
+                            .accentColor(.green)
+                    }
+                    .padding(.top, 10.0)
+                }.padding(.vertical)
                 
-                VStack (alignment: .leading) {
-                    Text("Password length: \(Int(passLen))")
-                    Slider(value: $passLen, in: 6...24, step: 1.0)
-                }
                 
-                        
                 Button (action: {
                     print("generate pressed")
                 }) {
