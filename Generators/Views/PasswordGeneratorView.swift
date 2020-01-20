@@ -29,6 +29,7 @@ struct PasswordGeneratorView: View {
                     
                     Button (action: {
                         print("link pressed")
+                        UIPasteboard.general.string = self.password
                     }) {
                         Image("copyIcon2")
                             .resizable()
@@ -58,7 +59,7 @@ struct PasswordGeneratorView: View {
                         Text("Password length: \(Int(passLen))")
                             .font(.system(size: 24))
                         Slider(value: $passLen, in: 6...24, step: 1.0)
-                            .accentColor(.green)
+                            .accentColor(passLen < 12 ? .red : .green)
                     }
                     .padding(.top, 10.0)
                 }.padding(.vertical)
@@ -66,6 +67,8 @@ struct PasswordGeneratorView: View {
                 
                 Button (action: {
                     print("generate pressed")
+                    self.password = generatePassword(letters: self.letters, digits: self.digits,
+                                                     symbols: self.symbols, len: Int(self.passLen))
                 }) {
                     ButtonView(text: "Generate")
                 }
