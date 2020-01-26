@@ -17,8 +17,10 @@ struct NumGeneratorView: View {
         
         ScrollView {
             NumberArea(text: randNum)
-            Text("")
-            VStack (spacing: 30) {
+
+            VStack (spacing: 35) {
+                
+                // min & max field
                 HStack (spacing: 40) {
                     VStack(alignment: .leading, spacing: 1) {
                         Text("min")
@@ -44,6 +46,7 @@ struct NumGeneratorView: View {
                 
                 Button(action: {
                     
+                    // generate ramdom numbers 8 times in order to simulate a iterate
                     var timerLimit = 8
                     Timer.scheduledTimer(withTimeInterval: 0.06, repeats: true) { timer in
                         
@@ -75,6 +78,7 @@ struct NumberArea: View {
         
     }
     
+    // scale text lown to fit in fixed width
     func getSize() -> CGFloat {
         return CGFloat(260 - text.count*30)
     }

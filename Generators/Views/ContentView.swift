@@ -12,6 +12,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             ScrollView {
+                
                 VStack (spacing: 18) {
                     NavigationLink(destination: NumGeneratorView()) {
                         ButtonView(text: "Numbers")

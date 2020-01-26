@@ -16,8 +16,12 @@ struct FlipCoinView: View {
     
     var body: some View {
         ScrollView {
+            
             VStack(spacing: 30) {
+                
                 VStack(spacing: 15) {
+                    
+                    // show coin's side depend on random boolean value
                     Image(isFlipped ? "coinHead" : "coinTail")
                         .resizable()
                         .frame(width: 250, height: 250)
@@ -32,15 +36,18 @@ struct FlipCoinView: View {
                 Button(action: {
                     playSound(sound: "Sounds/coinflip", format: "mp3")
                     
+                    // rotete coin 3 times
                     withAnimation(Animation.easeIn(duration: 0.9)) {
                         self.flipAmount += 1080
                     }
                     
+                    // change heads and tails 6 times (onse every 180 degrees)
                     var flipTimerLimit = 4
                     Timer.scheduledTimer(withTimeInterval: 0.2, repeats: true) { timer in
                         self.isFlipped.toggle()
                         flipTimerLimit -= 1
                         
+                        // random side of coin
                         if (flipTimerLimit == 0) {
                             self.isFlipped = Bool.random()
                             if (self.isFlipped) {

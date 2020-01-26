@@ -8,8 +8,8 @@
 
 import Foundation
 
-
 func generateRandomNumber(min: String, max: String) -> String {
+    
     if min.count == 0 || max.count == 0 {
         return "error"
     }

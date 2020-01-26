@@ -22,11 +22,13 @@ struct PasswordGeneratorView: View {
                 HStack {
                     
                     Text(self.password)
+                        // scale text lown to fit in fixed width
                         .font(.system(size: self.password.count > 12 ?
                             CGFloat(36 - 36*Float(self.password.count)/50) : 36))
                     
                     Spacer()
                     
+                    // Copy password button
                     Button (action: {
                         print("link pressed")
                         UIPasteboard.general.string = self.password
@@ -59,12 +61,13 @@ struct PasswordGeneratorView: View {
                         Text("Password length: \(Int(passLen))")
                             .font(.system(size: 24))
                         Slider(value: $passLen, in: 6...24, step: 1.0)
+                            // change color of slider depend on chosen length
                             .accentColor(passLen < 12 ? .red : .green)
                     }
                     .padding(.top, 10.0)
                 }.padding(.vertical)
                 
-                
+                // Generate password
                 Button (action: {
                     print("generate pressed")
                     self.password = generatePassword(letters: self.letters, digits: self.digits,

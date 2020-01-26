@@ -13,22 +13,24 @@ func generatePassword(letters: Bool, digits: Bool, symbols: Bool, len: Int) -> S
         return "error"
     }
     
-    var availableChars = ""
+    var availableSymbols = ""
     var password = ""
     
     if letters {
-        availableChars += "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"
+        availableSymbols += "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"
     }
     if digits {
-        availableChars += "12345678909876543210"
+        availableSymbols += "12345678909876543210"
     }
     if symbols {
-        availableChars += "!@#$%^&*()-+=_{}[]:;/?.,><"
+        availableSymbols += "!@#$%^&*()-+=_{}[]:;/?.,><"
     }
     
     for _ in 0 ..< len {
-        let index = availableChars.index(availableChars.startIndex, offsetBy: Int.random(in: 0 ..< availableChars.count))
-        password.append(availableChars[index])
+        //  random index of avaivable symbols
+        let index = availableSymbols.index(availableSymbols.startIndex, offsetBy: Int.random(in: 0 ..< availableSymbols.count))
+
+        password.append(availableSymbols[index])
     }
     
     return password
