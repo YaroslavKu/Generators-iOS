@@ -12,8 +12,8 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             ScrollView {
-                
                 VStack (spacing: 18) {
+                    
                     NavigationLink(destination: NumGeneratorView()) {
                         ButtonView(text: "Numbers")
                     }
@@ -33,10 +33,10 @@ struct ContentView: View {
                         ButtonView(text: "Words (x)")
                     }
                     .buttonStyle(PlainButtonStyle())
+                    
                 }.padding()
-            }
                 
-            .navigationBarTitle(Text("Generators"), displayMode: .automatic)
+            }.navigationBarTitle(Text("Generators"), displayMode: .automatic)
         }
     }
 }

@@ -9,11 +9,7 @@
 import SwiftUI
 
 struct PasswordGeneratorView: View {
-    @State var passLen: Double = 12.0
-    @State var password = "password"
-    @State var letters  = true
-    @State var digits   = true
-    @State var symbols  = true
+    @ObservedObject private var passGeneratorVM = PasswordGeneratorViewModel()
     
     
     var body: some View {
@@ -21,17 +17,15 @@ struct PasswordGeneratorView: View {
             VStack (spacing: 25) {
                 HStack {
                     
-                    Text(self.password)
-                        // scale text lown to fit in fixed width
-                        .font(.system(size: self.password.count > 12 ?
-                            CGFloat(36 - 36*Float(self.password.count)/50) : 36))
+                    Text(self.passGeneratorVM.password)
+                        .font(.system(size: passGeneratorVM.getSize()))
                     
                     Spacer()
                     
                     // Copy password button
                     Button (action: {
                         print("link pressed")
-                        UIPasteboard.general.string = self.password
+                        UIPasteboard.general.string = self.passGeneratorVM.password
                     }) {
                         Image("copyIcon2")
                             .resizable()
@@ -44,34 +38,33 @@ struct PasswordGeneratorView: View {
                 .frame(height: 100)
                 
                 VStack {
-                    Toggle(isOn: $letters) {
+                    Toggle(isOn: $passGeneratorVM.letters) {
                         Text("Letters")
                     }
 
                         
-                    Toggle(isOn: $digits) {
+                    Toggle(isOn: $passGeneratorVM.digits) {
                         Text("Digits")
                     }
                         
-                    Toggle(isOn: $symbols) {
+                    Toggle(isOn: $passGeneratorVM.symbols) {
                         Text("Symbols")
                     }
                     
                     VStack (alignment: .leading) {
-                        Text("Password length: \(Int(passLen))")
+                        Text("Password length: \(Int(passGeneratorVM.passLen))")
                             .font(.system(size: 24))
-                        Slider(value: $passLen, in: 6...24, step: 1.0)
+                        Slider(value: $passGeneratorVM.passLen, in: 6...24, step: 1.0)
                             // change color of slider depend on chosen length
-                            .accentColor(passLen < 12 ? .red : .green)
+                            .accentColor(passGeneratorVM.passLen < 12 ? .red : .green)
                     }
                     .padding(.top, 10.0)
                 }.padding(.vertical)
                 
-                // Generate password
+                // Generate password button
                 Button (action: {
                     print("generate pressed")
-                    self.password = generatePassword(letters: self.letters, digits: self.digits,
-                                                     symbols: self.symbols, len: Int(self.passLen))
+                    self.passGeneratorVM.generatePassword()
                 }) {
                     ButtonView(text: "Generate")
                 }

@@ -12,7 +12,6 @@ struct NumGeneratorView: View {
     @ObservedObject private var numGeneratorVM = NumGeneratorViewModel()
     
     var body: some View {
-        
         ScrollView {
             Text(numGeneratorVM.randNum)
                 .font(.system(size: numGeneratorVM.getSize()))
@@ -45,22 +44,11 @@ struct NumGeneratorView: View {
                 }
                 
                 Button(action: {
-                    
-                    // generate ramdom numbers 8 times in order to simulate a iterate
-                    var timerLimit = 8
-                    Timer.scheduledTimer(withTimeInterval: 0.06, repeats: true) { timer in
-                        
-                        self.numGeneratorVM.generateRandomNumber()
-                        timerLimit -= 1
-                            
-                        if (timerLimit == 0) {
-                            timer.invalidate()
-                        }
-                    }
-                    
+                    self.numGeneratorVM.runGenerateAnimation()
                 }) {
                     ButtonView(text: "Generate")
                 }.buttonStyle(PlainButtonStyle())
+                
             }.padding()
             
         }
