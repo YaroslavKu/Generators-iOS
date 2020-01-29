@@ -11,7 +11,7 @@
 import SwiftUI
 
 struct ButtonView: View {
-    let text:           String
+    let text: String
     
     var body: some View {
 
