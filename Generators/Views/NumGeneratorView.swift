@@ -9,14 +9,14 @@
 import SwiftUI
 
 struct NumGeneratorView: View {
-    @State var randNum = "47"
-    @State var min: String = "1"
-    @State var max: String = "100"
+    @ObservedObject private var numGeneratorVM = NumGeneratorViewModel()
     
     var body: some View {
         
         ScrollView {
-            NumberArea(text: randNum)
+            Text(numGeneratorVM.randNum)
+                .font(.system(size: numGeneratorVM.getSize()))
+                .frame(width: 350, height: 200)
 
             VStack (spacing: 35) {
                 
@@ -27,7 +27,7 @@ struct NumGeneratorView: View {
                             .fontWeight(.light)
                             .foregroundColor(Color.gray)
                             .font(.system(size: 20))
-                        TextField("min", text: $min)
+                        TextField("min", text: $numGeneratorVM.min)
                             .multilineTextAlignment(.center)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .keyboardType(.decimalPad)
@@ -37,7 +37,7 @@ struct NumGeneratorView: View {
                         .fontWeight(.light)
                         .foregroundColor(Color.gray)
                         .font(.system(size: 20))
-                        TextField("max", text: $max)
+                        TextField("max", text: $numGeneratorVM.max)
                             .multilineTextAlignment(.center)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .keyboardType(.decimalPad)
@@ -50,7 +50,7 @@ struct NumGeneratorView: View {
                     var timerLimit = 8
                     Timer.scheduledTimer(withTimeInterval: 0.06, repeats: true) { timer in
                         
-                        self.randNum = generateRandomNumber(min: self.min, max: self.max)
+                        self.numGeneratorVM.generateRandomNumber()
                         timerLimit -= 1
                             
                         if (timerLimit == 0) {
@@ -65,22 +65,6 @@ struct NumGeneratorView: View {
             
         }
         
-    }
-}
-
-struct NumberArea: View {
-    let text: String
-    
-    var body: some View {
-            Text(text)
-                .font(.system(size: getSize() ))
-                .frame(width: 350, height: 200)
-        
-    }
-    
-    // scale text lown to fit in fixed width
-    func getSize() -> CGFloat {
-        return CGFloat(260 - text.count*30)
     }
 }
 
