@@ -14,10 +14,6 @@ class NumGeneratorViewModel: ObservableObject {
     @Published var min: String = "1"
     @Published var max: String = "100"
     
-    func getSize() -> CGFloat {
-        return CGFloat(260 - randNum.count*30)
-    }
-    
     func runGenerateAnimation() {
         var timerLimit = 8
         

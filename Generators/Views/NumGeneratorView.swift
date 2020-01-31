@@ -14,8 +14,11 @@ struct NumGeneratorView: View {
     var body: some View {
         ScrollView {
             Text(numGeneratorVM.randNum)
-                .font(.system(size: numGeneratorVM.getSize()))
                 .frame(width: 350, height: 200)
+                .lineLimit(1)
+                .font(.system(size: 230))
+                .minimumScaleFactor(CGFloat(200) / (CGFloat(numGeneratorVM.randNum.count * 100)))
+
 
             VStack (spacing: 35) {
                 
