@@ -10,12 +10,15 @@ import Foundation
 import SwiftUI
 
 class PasswordGeneratorViewModel: ObservableObject {
-    @Published var passLen: Double = 12.0
+    //MARK: - Variables
     @Published var password = "password"
+    @Published var passLen  = 12.0
     @Published var letters  = true
     @Published var digits   = true
     @Published var symbols  = true
     
+    
+    //MARK: - Piblic Methods
     // scale text lown to fit in fixed width
     func getSize() -> CGFloat {
         if passLen > 12 {

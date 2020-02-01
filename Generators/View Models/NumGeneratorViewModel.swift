@@ -10,10 +10,27 @@ import Foundation
 import SwiftUI
 
 class NumGeneratorViewModel: ObservableObject {
-    @Published var randNum = "47"
-    @Published var min: String = "1"
-    @Published var max: String = "100"
+    //MARK: - Variables
+    @Published var randNum: String = UserDefaults.standard.string(forKey: "randNum") ?? "47" {
+        didSet {
+            UserDefaults.standard.set(self.randNum, forKey: "randNum")
+        }
+    }
     
+    @Published var min: String = UserDefaults.standard.string(forKey: "min") ?? "1" {
+        didSet {
+            UserDefaults.standard.set(self.min, forKey: "min")
+        }
+    }
+    
+    @Published var max: String = UserDefaults.standard.string(forKey: "max") ?? "100" {
+        didSet {
+            UserDefaults.standard.set(self.max, forKey: "max")
+        }
+    }
+    
+    
+    //MARK: - Public Methods
     func runGenerateAnimation() {
         var timerLimit = 8
         
@@ -27,7 +44,9 @@ class NumGeneratorViewModel: ObservableObject {
             }
         }
     }
+        
     
+    //MARK: - Private Methods
     private func generateRandomNumber() {
         if min.count == 0 || max.count == 0 {
             randNum = "Error"

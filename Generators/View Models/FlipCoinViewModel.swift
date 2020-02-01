@@ -10,16 +10,19 @@ import Foundation
 import SwiftUI
 
 class FlipCoinViewModel: ObservableObject {
+    //MARK: - Variables
     @Published var isFlipped = false
     @Published var flipAmount = 0.0
     @Published var side = "It's tails!"
     
+    //MARK: - Public Methods
     func runRotateCoinAmimation() {
         playSound(sound: "Sounds/coinflip", format: "mp3")
         rotateCoin()
         changeSide()
     }
     
+    //MARK: - Private Methods
     private func rotateCoin() {
         withAnimation(Animation.easeIn(duration: 0.9)) {
             self.flipAmount += 1080     // rotete coin 3 times
