@@ -17,12 +17,28 @@
 		6D2E338F23CA6536000B0BC6 /* NumGeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2E338E23CA6536000B0BC6 /* NumGeneratorView.swift */; };
 		6D6A127823CDF10B00BA5CE1 /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6A127723CDF10B00BA5CE1 /* PlaySound.swift */; };
 		6D74493B23D4FC63004223A4 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 6D74493A23D4FC62004223A4 /* Sounds */; };
+		6D7BCCC923E64C2300F81CC9 /* LoremSwiftum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7BCCC823E64C2300F81CC9 /* LoremSwiftum.framework */; };
+		6D7BCCCA23E64C2300F81CC9 /* LoremSwiftum.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7BCCC823E64C2300F81CC9 /* LoremSwiftum.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6D939EBA23CCC90C000EDE12 /* FlipCoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D939EB923CCC90C000EDE12 /* FlipCoinView.swift */; };
 		6DBBCCE723CB7E8A006F5183 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBBCCE623CB7E8A006F5183 /* ButtonView.swift */; };
 		6DF49E9E23E1097D00B1C793 /* NumGeneratorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF49E9D23E1097C00B1C793 /* NumGeneratorViewModel.swift */; };
 		6DF49EA023E2251F00B1C793 /* FlipCoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF49E9F23E2251F00B1C793 /* FlipCoinViewModel.swift */; };
 		6DF49EA223E22A1D00B1C793 /* PasswordGeneratorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF49EA123E22A1D00B1C793 /* PasswordGeneratorViewModel.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6D7BCCCB23E64C2300F81CC9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6D7BCCCA23E64C2300F81CC9 /* LoremSwiftum.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		6D19B64823D09F5A0079DE53 /* PasswordGeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordGeneratorView.swift; sourceTree = "<group>"; };
@@ -37,6 +53,7 @@
 		6D2E338E23CA6536000B0BC6 /* NumGeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumGeneratorView.swift; sourceTree = "<group>"; };
 		6D6A127723CDF10B00BA5CE1 /* PlaySound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
 		6D74493A23D4FC62004223A4 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
+		6D7BCCC823E64C2300F81CC9 /* LoremSwiftum.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LoremSwiftum.framework; path = Carthage/Build/iOS/LoremSwiftum.framework; sourceTree = "<group>"; };
 		6D939EB923CCC90C000EDE12 /* FlipCoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipCoinView.swift; sourceTree = "<group>"; };
 		6DBBCCE623CB7E8A006F5183 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		6DF49E9D23E1097C00B1C793 /* NumGeneratorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumGeneratorViewModel.swift; sourceTree = "<group>"; };
@@ -49,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D7BCCC923E64C2300F81CC9 /* LoremSwiftum.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +86,7 @@
 			children = (
 				6D2E337623CA3D68000B0BC6 /* Generators */,
 				6D2E337523CA3D68000B0BC6 /* Products */,
+				6D7BCCC723E64C2300F81CC9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +151,14 @@
 			path = Resourses;
 			sourceTree = "<group>";
 		};
+		6D7BCCC723E64C2300F81CC9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6D7BCCC823E64C2300F81CC9 /* LoremSwiftum.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6DF49E9A23E1093500B1C793 /* View Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +179,8 @@
 				6D2E337023CA3D68000B0BC6 /* Sources */,
 				6D2E337123CA3D68000B0BC6 /* Frameworks */,
 				6D2E337223CA3D68000B0BC6 /* Resources */,
+				6D7BCCCB23E64C2300F81CC9 /* Embed Frameworks */,
+				6D7BCCCC23E64C3C00F81CC9 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -208,6 +237,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6D7BCCCC23E64C3C00F81CC9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/LoremSwiftum.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6D2E337023CA3D68000B0BC6 /* Sources */ = {
@@ -363,6 +413,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Generators/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Generators/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -382,6 +436,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Generators/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Generators/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
