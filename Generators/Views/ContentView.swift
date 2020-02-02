@@ -29,8 +29,8 @@ struct ContentView: View {
                     }
                     .buttonStyle(PlainButtonStyle())
                     
-                    NavigationLink(destination: Text("Test")) {
-                        ButtonView(text: "Words (x)")
+                    NavigationLink(destination: LoremGeneratorView()) {
+                        ButtonView(text: "Lorem Ipsum")
                     }
                     .buttonStyle(PlainButtonStyle())
                     

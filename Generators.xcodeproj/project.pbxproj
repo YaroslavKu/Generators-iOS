@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6D19B64923D09F5A0079DE53 /* PasswordGeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D19B64823D09F5A0079DE53 /* PasswordGeneratorView.swift */; };
+		6D25E52023E789F60096107A /* LoremGeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D25E51F23E789F60096107A /* LoremGeneratorView.swift */; };
+		6D25E52223E78A120096107A /* LoremGeneratorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D25E52123E78A120096107A /* LoremGeneratorViewModel.swift */; };
 		6D2E337823CA3D68000B0BC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2E337723CA3D68000B0BC6 /* AppDelegate.swift */; };
 		6D2E337A23CA3D68000B0BC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2E337923CA3D68000B0BC6 /* SceneDelegate.swift */; };
 		6D2E337C23CA3D68000B0BC6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2E337B23CA3D68000B0BC6 /* ContentView.swift */; };
@@ -42,6 +44,8 @@
 
 /* Begin PBXFileReference section */
 		6D19B64823D09F5A0079DE53 /* PasswordGeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordGeneratorView.swift; sourceTree = "<group>"; };
+		6D25E51F23E789F60096107A /* LoremGeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoremGeneratorView.swift; sourceTree = "<group>"; };
+		6D25E52123E78A120096107A /* LoremGeneratorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoremGeneratorViewModel.swift; sourceTree = "<group>"; };
 		6D2E337423CA3D68000B0BC6 /* Generators.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Generators.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D2E337723CA3D68000B0BC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D2E337923CA3D68000B0BC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +134,7 @@
 				6D2E338E23CA6536000B0BC6 /* NumGeneratorView.swift */,
 				6D939EB923CCC90C000EDE12 /* FlipCoinView.swift */,
 				6D19B64823D09F5A0079DE53 /* PasswordGeneratorView.swift */,
+				6D25E51F23E789F60096107A /* LoremGeneratorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -165,6 +170,7 @@
 				6DF49E9D23E1097C00B1C793 /* NumGeneratorViewModel.swift */,
 				6DF49E9F23E2251F00B1C793 /* FlipCoinViewModel.swift */,
 				6DF49EA123E22A1D00B1C793 /* PasswordGeneratorViewModel.swift */,
+				6D25E52123E78A120096107A /* LoremGeneratorViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -272,9 +278,11 @@
 				6D19B64923D09F5A0079DE53 /* PasswordGeneratorView.swift in Sources */,
 				6DBBCCE723CB7E8A006F5183 /* ButtonView.swift in Sources */,
 				6D2E337C23CA3D68000B0BC6 /* ContentView.swift in Sources */,
+				6D25E52023E789F60096107A /* LoremGeneratorView.swift in Sources */,
 				6D939EBA23CCC90C000EDE12 /* FlipCoinView.swift in Sources */,
 				6DF49EA223E22A1D00B1C793 /* PasswordGeneratorViewModel.swift in Sources */,
 				6D2E338F23CA6536000B0BC6 /* NumGeneratorView.swift in Sources */,
+				6D25E52223E78A120096107A /* LoremGeneratorViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
