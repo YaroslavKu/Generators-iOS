@@ -12,30 +12,29 @@ import LoremSwiftum
 class LoremGeneratorViewModel: ObservableObject {
     //MARK: - Variables
     @Published var generatedText: String = "Lorem Ipsum"
-    @Published var chosenType: String = "words"  // Chosen type to generate (words, sentences etc)
-    @Published var types: [String] = ["words", "sentences", "paragraphs", "tweet", "title", "name", "email"]
-    @Published var numOf: Int = 3
+    @Published var chosenType: String = "Coose"  // Chosen type to generate (words, sentences etc)
+    @Published var numOf: String = "3"
     
     
     //MARK: - Methods
     func generateLorem() {
         switch chosenType {
-        case "words":
-            generatedText = Lorem.words(numOf)
-        case "sentences":
-            generatedText = Lorem.sentences(numOf)
-        case "paragraphs":
-            generatedText = Lorem.paragraphs(numOf)
-        case "tweet":
+        case "Words":
+            generatedText = Lorem.words(Int(numOf)!)
+        case "Sentences":
+            generatedText = Lorem.sentences(Int(numOf)!)
+        case "Paragraphs":
+            generatedText = Lorem.paragraphs(Int(numOf)!)
+        case "Tweet":
             generatedText = Lorem.tweet
-        case "title":
+        case "Title":
             generatedText = Lorem.title
-        case "name":
+        case "Name":
             generatedText = Lorem.fullName
-        case "email":
+        case "Email":
             generatedText = Lorem.emailAddress
         default:
-            generatedText = "error"
+            generatedText = "Error"
         }
     }
     
