@@ -1,8 +1,7 @@
 <h1 align="center">
   <img src="./Demo/IconDemo.png"><br>
-  <p>Generators-iOS</p><br>
+  <p>Generators-iOS</p>
 </h1>
-
 # Description
 ![Language](https://img.shields.io/badge/swift-5.1.3-brightgreen.svg)
 ![Demo](https://github.com/YaroslavKu/Generators-iOS/blob/master/Demo/preview.png)
