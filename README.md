@@ -1,4 +1,10 @@
-![Language](https://img.shields.io/badge/swift-5.1.3-brightgreen.svg)
+<h1 align="center">
+  ![Demo](https://github.com/YaroslavKu/Generators-iOS/blob/master/Demo/IconDemo.png)
+  <p>Generators-iOS</p><br>
+</h1>
+<p align="center">
+  ![Language](https://img.shields.io/badge/swift-5.1.3-brightgreen.svg)
+</p>
 
 # Description
 ![Demo](https://github.com/YaroslavKu/Generators-iOS/blob/master/Demo/preview.png)
