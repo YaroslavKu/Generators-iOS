@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="./Demo/IconDemo.png"><br>
+  <img src="./Demo/IconDemo.png">
   <p>Generators-iOS</p>
 </h1>
 
