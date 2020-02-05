@@ -25,6 +25,9 @@ struct FlipCoinView: View {
                     
                     Text(self.flipCoinVM.side)
                         .font(.system(size: 25))
+                    
+                    Text("Heads \(flipCoinVM.statHeads)  :  \(flipCoinVM.statTails) Tails")
+                        .font(.system(size: 18))
                     }
                 
                 Button(action: {
@@ -32,7 +35,6 @@ struct FlipCoinView: View {
                 }) {
                     ButtonView(text: "Flip")
                 }.buttonStyle(PlainButtonStyle())
-                
             }.padding()
         }
     }

@@ -15,6 +15,19 @@ class FlipCoinViewModel: ObservableObject {
     @Published var flipAmount = 0.0
     @Published var side = "It's tails!"
     
+    @Published var statHeads: Int = UserDefaults.standard.integer(forKey: "statHeads") {
+        didSet {
+            UserDefaults.standard.set(self.statHeads, forKey: "statHeads")
+        }
+    }
+    
+    @Published var statTails: Int = UserDefaults.standard.integer(forKey: "statTails") {
+        didSet {
+            UserDefaults.standard.set(self.statTails, forKey: "statTails")
+        }
+    }
+    
+    
     //MARK: - Public Methods
     func runRotateCoinAmimation() {
         playSound(sound: "Sounds/coinflip", format: "mp3")
@@ -42,8 +55,10 @@ class FlipCoinViewModel: ObservableObject {
                 self.isFlipped = Bool.random()
                 if (self.isFlipped) {
                     self.side = "It's heads!"
+                    self.statHeads += 1
                 } else {
                     self.side = "Ir's tails!"
+                    self.statTails += 1
                 }
                 
                 timer.invalidate()
