@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import SPAlert
 
 struct LoremGeneratorView: View {
     @ObservedObject private var loremVM = LoremGeneratorViewModel()
@@ -26,6 +27,9 @@ struct LoremGeneratorView: View {
                     Button (action: {
                         print("link pressed")
                         UIPasteboard.general.string = self.loremVM.generatedText
+                        let alertView = SPAlertView(title: "Text copied", message: nil, preset: SPAlertPreset.done)
+                        alertView.duration = 1
+                        alertView.present()
                     }) {
                         Image("copyIcon2")
                             .resizable()

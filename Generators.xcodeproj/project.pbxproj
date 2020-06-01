@@ -19,23 +19,24 @@
 		6D2E338F23CA6536000B0BC6 /* NumGeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2E338E23CA6536000B0BC6 /* NumGeneratorView.swift */; };
 		6D6A127823CDF10B00BA5CE1 /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6A127723CDF10B00BA5CE1 /* PlaySound.swift */; };
 		6D74493B23D4FC63004223A4 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 6D74493A23D4FC62004223A4 /* Sounds */; };
-		6D7BCCC923E64C2300F81CC9 /* LoremSwiftum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7BCCC823E64C2300F81CC9 /* LoremSwiftum.framework */; };
-		6D7BCCCA23E64C2300F81CC9 /* LoremSwiftum.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7BCCC823E64C2300F81CC9 /* LoremSwiftum.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6D939EBA23CCC90C000EDE12 /* FlipCoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D939EB923CCC90C000EDE12 /* FlipCoinView.swift */; };
 		6DBBCCE723CB7E8A006F5183 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBBCCE623CB7E8A006F5183 /* ButtonView.swift */; };
 		6DF49E9E23E1097D00B1C793 /* NumGeneratorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF49E9D23E1097C00B1C793 /* NumGeneratorViewModel.swift */; };
 		6DF49EA023E2251F00B1C793 /* FlipCoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF49E9F23E2251F00B1C793 /* FlipCoinViewModel.swift */; };
 		6DF49EA223E22A1D00B1C793 /* PasswordGeneratorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF49EA123E22A1D00B1C793 /* PasswordGeneratorViewModel.swift */; };
+		8407186E241D6D7F00B4C106 /* LoremSwiftum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7BCCC823E64C2300F81CC9 /* LoremSwiftum.framework */; };
+		8407186F241D6D7F00B4C106 /* LoremSwiftum.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7BCCC823E64C2300F81CC9 /* LoremSwiftum.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		84E677A724854AF8003709EA /* SPAlert.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E677A624854AF8003709EA /* SPAlert.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		6D7BCCCB23E64C2300F81CC9 /* Embed Frameworks */ = {
+		84071870241D6D8000B4C106 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6D7BCCCA23E64C2300F81CC9 /* LoremSwiftum.framework in Embed Frameworks */,
+				8407186F241D6D7F00B4C106 /* LoremSwiftum.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,6 +64,7 @@
 		6DF49E9D23E1097C00B1C793 /* NumGeneratorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumGeneratorViewModel.swift; sourceTree = "<group>"; };
 		6DF49E9F23E2251F00B1C793 /* FlipCoinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipCoinViewModel.swift; sourceTree = "<group>"; };
 		6DF49EA123E22A1D00B1C793 /* PasswordGeneratorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordGeneratorViewModel.swift; sourceTree = "<group>"; };
+		84E677A624854AF8003709EA /* SPAlert.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SPAlert.framework; path = Carthage/Build/iOS/SPAlert.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +72,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D7BCCC923E64C2300F81CC9 /* LoremSwiftum.framework in Frameworks */,
+				8407186E241D6D7F00B4C106 /* LoremSwiftum.framework in Frameworks */,
+				84E677A724854AF8003709EA /* SPAlert.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,6 +162,7 @@
 		6D7BCCC723E64C2300F81CC9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				84E677A624854AF8003709EA /* SPAlert.framework */,
 				6D7BCCC823E64C2300F81CC9 /* LoremSwiftum.framework */,
 			);
 			name = Frameworks;
@@ -185,8 +189,8 @@
 				6D2E337023CA3D68000B0BC6 /* Sources */,
 				6D2E337123CA3D68000B0BC6 /* Frameworks */,
 				6D2E337223CA3D68000B0BC6 /* Resources */,
-				6D7BCCCB23E64C2300F81CC9 /* Embed Frameworks */,
 				6D7BCCCC23E64C3C00F81CC9 /* ShellScript */,
+				84071870241D6D8000B4C106 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -254,6 +258,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/LoremSwiftum.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SPAlert.framework",
 			);
 			outputFileListPaths = (
 			);

@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import SPAlert
 
 struct PasswordGeneratorView: View {
     @ObservedObject private var passGeneratorVM = PasswordGeneratorViewModel()
@@ -26,6 +27,9 @@ struct PasswordGeneratorView: View {
                     Button (action: {
                         print("link pressed")
                         UIPasteboard.general.string = self.passGeneratorVM.password
+                        let alertView = SPAlertView(title: "Password copied", message: nil, preset: SPAlertPreset.done)
+                        alertView.duration = 1
+                        alertView.present()
                     }) {
                         Image("copyIcon2")
                             .resizable()
