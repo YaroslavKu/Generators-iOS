@@ -41,3 +41,6 @@ Open the xcodeproj, build and run.
 * iOS 13.0+
 * Xcode 11+
 * Swift 5
+
+# License
+MIT
